@@ -38,11 +38,25 @@ const FruitList = () => {
     };
 
     // useEffect hook to fetch the fruit list when the component mounts
+//     This code uses the React useEffect hook to run a function when the component first mounts:
+
+// useEffect(() => {    fetchFruits(); // Fetch fruits on initial render}, []); // Empty dependency array ensures this runs only once
+// useEffect(() => { ... }, []) means the code inside will run only once, right after the component is rendered for the first time.
+// Inside, it calls fetchFruits(), which fetches the list of fruits from the backend and updates the state.
+// The empty array [] tells React not to re-run this effect unless the component is re-mounted.
+// Summary:
+// This code automatically loads the fruit list from the backend when the FruitList component appears on the page.
     useEffect(() => {
         fetchFruits(); // Fetch fruits on initial render
     }, []); // Empty dependency array ensures this runs only once
 
     // Render the UI
+    //  fruits.map(...) loops through the fruits array (from state).
+    // For each fruit, it creates a <li> element showing the fruit's name.
+    // key={index} gives each list item a unique key (required by React for efficient rendering).
+    // The result is a list of <li> elements, one for each fruit, displayed inside the <ul>.
+    // Summary:
+    // This code dynamically displays all fruits fetched from the backend as a list on the page.
     return (
         <div>
             {/* Heading for the fruit list */}
