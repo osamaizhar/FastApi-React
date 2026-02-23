@@ -32,3 +32,6 @@ const AddFruitForm = ({ addFruit }) => {
             <button type="submit">Add Fruit</button>
         </form>
     );
+}
+
+export default AddFruitForm; // Export the AddFruitForm component for use in other parts of the application

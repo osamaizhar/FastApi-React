@@ -69,7 +69,9 @@ const FruitList = () => {
                 ))}
             </ul>
             {/* You can add the AddFruitForm component here to allow adding new fruits */}
-            {/* <AddFruitForm addFruit={addFruit} /> */}
+            <AddFruitForm addFruit={addFruit} />
         </div>
     );
 }
+
+export default FruitList; // Export the FruitList component for use in other parts of the application

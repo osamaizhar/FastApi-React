@@ -33,7 +33,8 @@ app = FastAPI()  # This creates the main FastAPI application object, which handl
 
 # List of allowed origins for CORS (Cross-Origin Resource Sharing)
 origins = [
-    "http://localhost:3000",  # We allow requests from our React frontend running on this origin. This is necessary for local development.
+    # "http://localhost:3000",  # We allow requests from our React frontend running on this origin. This is necessary for local development. It should be same as in frontend
+    "http://localhost:5173",  # We allow requests from our React frontend running on this origin. This is necessary for local development. It should be same as in frontend
 ]
 
 # Add CORS middleware to the app to handle cross-origin requests
